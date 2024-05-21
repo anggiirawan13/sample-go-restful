@@ -1,1 +1,4 @@
-# Sample Go Restful API with GoFiber and GORM
+# Sample Go Restful API
+- GoFiber
+- GORM
+- PostgreSQL

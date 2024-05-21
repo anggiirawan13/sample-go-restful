@@ -1,9 +1,11 @@
 package models
 
-import "gorm.io/gorm"
-
 type UserModel struct {
-	gorm.Model
+	BaseModel
 	Name  string `json:"name"`
 	Email string `json:"email"`
+}
+
+func (user *UserModel) TableName() string {
+	return "users"
 }

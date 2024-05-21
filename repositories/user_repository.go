@@ -1,6 +1,8 @@
 package repositories
 
-import "github.com/sample-go-restful/models"
+import (
+	"github.com/sample-go-restful/models"
+)
 
 type UserRepository interface {
 	FindAll() ([]models.UserModel, error)

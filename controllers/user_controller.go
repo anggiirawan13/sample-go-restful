@@ -56,7 +56,7 @@ func (c *UserController) UpdateUser(ctx *fiber.Ctx) error {
 	if err := ctx.BodyParser(&user); err != nil {
 		return ctx.Status(fiber.StatusBadRequest).JSON(fiber.Map{"error": err.Error()})
 	}
-	user.ID = uint(id)
+	user.BaseModel.ID = uint(id)
 	user, err = c.userService.UpdateUser(user)
 	if err != nil {
 		return ctx.Status(fiber.StatusInternalServerError).JSON(fiber.Map{"error": err.Error()})

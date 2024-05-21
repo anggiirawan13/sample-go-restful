@@ -1,6 +1,8 @@
 package services
 
-import "github.com/sample-go-restful/models"
+import (
+	"github.com/sample-go-restful/models"
+)
 
 type UserService interface {
 	GetAllUsers() ([]models.UserModel, error)
